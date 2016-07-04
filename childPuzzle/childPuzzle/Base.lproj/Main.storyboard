@@ -1,0 +1,448 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+    </dependencies>
+    <scenes>
+        <!--Main Menu-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController title="Main Menu" id="BYZ-38-t0r" customClass="MainMenuViewController" customModule="childPuzzle" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="1366" height="1024"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" adjustsImageWhenDisabled="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8xX-yB-5v1" userLabel="Background">
+                                <rect key="frame" x="0.0" y="0.0" width="1366" height="1024"/>
+                                <state key="normal" backgroundImage="menuBackground">
+                                    <color key="titleColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="backgroundTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="8XY-q6-r2E"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" alpha="0.90000000000000002" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="panelBg" translatesAutoresizingMaskIntoConstraints="NO" id="Jnn-kK-ney" userLabel="settingsPanelBackground">
+                                <rect key="frame" x="1366" y="50" width="452" height="410"/>
+                                <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="20"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="clipsToBounds" value="YES"/>
+                                </userDefinedRuntimeAttributes>
+                            </imageView>
+                            <view opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="btm-aD-ZJv" userLabel="settingsPanel" customClass="UIImageView">
+                                <rect key="frame" x="1366" y="50" width="452" height="410"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6l2-2o-VKv" userLabel="MusicSwitch">
+                                        <rect key="frame" x="80" y="60" width="77" height="77"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="6l2-2o-VKv" secondAttribute="height" multiplier="1:1" id="vEr-vv-I0l"/>
+                                        </constraints>
+                                        <state key="normal" backgroundImage="music"/>
+                                        <connections>
+                                            <action selector="musicSwitchButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="6tX-xf-fD9"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Spo-ua-FdD" userLabel="SoundSwitch">
+                                        <rect key="frame" x="296" y="60" width="77" height="77"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="Spo-ua-FdD" secondAttribute="height" multiplier="1:1" id="u23-vX-Toq"/>
+                                        </constraints>
+                                        <state key="normal" backgroundImage="tone"/>
+                                        <connections>
+                                            <action selector="soundSwitchButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="NIe-9K-ZT0"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hil-8v-3be" userLabel="MiraclesSwitch">
+                                        <rect key="frame" x="80" y="170" width="293" height="43"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="hil-8v-3be" secondAttribute="height" multiplier="6.83:1" id="WG9-z7-AEi"/>
+                                        </constraints>
+                                        <state key="normal" backgroundImage="miracleItemsCheckboxOn"/>
+                                        <connections>
+                                            <action selector="miracleItemsButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Adq-Mm-F2p"/>
+                                        </connections>
+                                    </button>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="difficultyLevelLabel" translatesAutoresizingMaskIntoConstraints="NO" id="FLa-d0-INm" userLabel="DifficultyLevelText">
+                                        <rect key="frame" x="80" y="310" width="114" height="43"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="FLa-d0-INm" secondAttribute="height" multiplier="2.64:1" id="7xc-2C-LiP"/>
+                                        </constraints>
+                                    </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4SN-KK-vKj" userLabel="ButtonLevelEasy">
+                                        <rect key="frame" x="225" y="310" width="36" height="43"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="4SN-KK-vKj" secondAttribute="height" multiplier="0.84:1" id="xFq-I2-f5W"/>
+                                        </constraints>
+                                        <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <state key="normal" backgroundImage="btnLevel1On"/>
+                                        <connections>
+                                            <action selector="buttonLevelEasyTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="HZ9-6h-bY0"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Xx-Cg-T6K" userLabel="ButtonLevelMedium">
+                                        <rect key="frame" x="281" y="310" width="36" height="43"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="7Xx-Cg-T6K" secondAttribute="height" multiplier="0.84:1" id="Ovu-en-RCr"/>
+                                        </constraints>
+                                        <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <state key="normal" backgroundImage="btnLevel2On"/>
+                                        <connections>
+                                            <action selector="buttonLevelMediumTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ecb-xg-xQd"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Ji-SQ-5f9" userLabel="ButtonLevelHard">
+                                        <rect key="frame" x="337" y="310" width="36" height="43"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="6Ji-SQ-5f9" secondAttribute="height" multiplier="0.84:1" id="klJ-Dr-Hzs"/>
+                                        </constraints>
+                                        <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <state key="normal" backgroundImage="btnLevel3On"/>
+                                        <connections>
+                                            <action selector="buttonLevelHardTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="IAP-uY-zNC"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fsG-Nv-EYF" userLabel="AutoPlaySwitch">
+                                        <rect key="frame" x="80" y="237" width="293" height="43"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="fsG-Nv-EYF" secondAttribute="height" multiplier="6.83:1" id="5nd-oD-mcp"/>
+                                        </constraints>
+                                        <state key="normal" backgroundImage="autoPlayCheckboxOn"/>
+                                        <connections>
+                                            <action selector="autoPlayButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="J6F-8X-DuO"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <accessibility key="accessibilityConfiguration" identifier="settingsPanel"/>
+                                <constraints>
+                                    <constraint firstItem="6l2-2o-VKv" firstAttribute="leading" secondItem="hil-8v-3be" secondAttribute="leading" id="7gP-Yn-QWW"/>
+                                    <constraint firstItem="7Xx-Cg-T6K" firstAttribute="top" secondItem="FLa-d0-INm" secondAttribute="top" id="8Fp-nR-kGE"/>
+                                    <constraint firstItem="4SN-KK-vKj" firstAttribute="trailing" secondItem="7Xx-Cg-T6K" secondAttribute="leading" constant="-20" id="8Jn-O8-KrU"/>
+                                    <constraint firstItem="4SN-KK-vKj" firstAttribute="top" secondItem="FLa-d0-INm" secondAttribute="top" id="BIa-pA-GyX"/>
+                                    <constraint firstItem="fsG-Nv-EYF" firstAttribute="centerX" secondItem="btm-aD-ZJv" secondAttribute="centerX" id="BPF-5E-J2o"/>
+                                    <constraint firstItem="hil-8v-3be" firstAttribute="top" secondItem="6l2-2o-VKv" secondAttribute="bottom" constant="33" id="HlY-Z5-O6z"/>
+                                    <constraint firstItem="4SN-KK-vKj" firstAttribute="height" secondItem="hil-8v-3be" secondAttribute="height" id="Jd1-q8-ZqL"/>
+                                    <constraint firstItem="FLa-d0-INm" firstAttribute="top" secondItem="fsG-Nv-EYF" secondAttribute="bottom" constant="30" id="JsZ-4i-n06"/>
+                                    <constraint firstItem="Spo-ua-FdD" firstAttribute="top" secondItem="6l2-2o-VKv" secondAttribute="top" id="Mjj-dk-b2C"/>
+                                    <constraint firstItem="FLa-d0-INm" firstAttribute="height" secondItem="hil-8v-3be" secondAttribute="height" id="OUc-K2-f6e"/>
+                                    <constraint firstItem="7Xx-Cg-T6K" firstAttribute="height" secondItem="hil-8v-3be" secondAttribute="height" id="QI0-wv-Fis"/>
+                                    <constraint firstItem="fsG-Nv-EYF" firstAttribute="top" secondItem="hil-8v-3be" secondAttribute="bottom" constant="24" id="RhI-JV-tHM"/>
+                                    <constraint firstItem="6Ji-SQ-5f9" firstAttribute="height" secondItem="hil-8v-3be" secondAttribute="height" id="RhT-mO-UgT"/>
+                                    <constraint firstItem="6Ji-SQ-5f9" firstAttribute="top" secondItem="FLa-d0-INm" secondAttribute="top" id="geC-4p-htl"/>
+                                    <constraint firstItem="hil-8v-3be" firstAttribute="centerX" secondItem="btm-aD-ZJv" secondAttribute="centerX" id="htD-u7-czT"/>
+                                    <constraint firstItem="FLa-d0-INm" firstAttribute="leading" secondItem="hil-8v-3be" secondAttribute="leading" id="j3M-8K-mwe"/>
+                                    <constraint firstItem="6l2-2o-VKv" firstAttribute="top" secondItem="btm-aD-ZJv" secondAttribute="top" constant="60" id="ncf-MO-kU2"/>
+                                    <constraint firstItem="6Ji-SQ-5f9" firstAttribute="trailing" secondItem="hil-8v-3be" secondAttribute="trailing" id="rGp-BH-uiM"/>
+                                    <constraint firstItem="6l2-2o-VKv" firstAttribute="width" secondItem="btm-aD-ZJv" secondAttribute="width" multiplier="0.17" id="sVH-nX-59N"/>
+                                    <constraint firstItem="7Xx-Cg-T6K" firstAttribute="trailing" secondItem="6Ji-SQ-5f9" secondAttribute="leading" constant="-20" id="siu-1z-xYs"/>
+                                    <constraint firstItem="fsG-Nv-EYF" firstAttribute="width" secondItem="btm-aD-ZJv" secondAttribute="width" multiplier="0.65" id="tl2-RY-VqW"/>
+                                    <constraint firstItem="Spo-ua-FdD" firstAttribute="trailing" secondItem="hil-8v-3be" secondAttribute="trailing" id="uqN-bU-RTp"/>
+                                    <constraint firstItem="Spo-ua-FdD" firstAttribute="width" secondItem="btm-aD-ZJv" secondAttribute="width" multiplier="0.17" id="urZ-rO-Eyy"/>
+                                    <constraint firstItem="hil-8v-3be" firstAttribute="width" secondItem="btm-aD-ZJv" secondAttribute="width" multiplier="0.65" id="v9Y-vZ-mxF"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="20"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="fill" contentVerticalAlignment="fill" adjustsImageWhenHighlighted="NO" adjustsImageWhenDisabled="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="73e-oK-456" userLabel="SettingsButton">
+                                <rect key="frame" x="1254" y="50" width="82" height="82"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="73e-oK-456" secondAttribute="height" multiplier="1:1" id="VaB-gv-Dec"/>
+                                </constraints>
+                                <state key="normal" image="settings"/>
+                                <connections>
+                                    <action selector="gearIconTouched:" destination="BYZ-38-t0r" eventType="touchUpInside" id="oju-8V-2VW"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenDisabled="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xd9-bV-cen" userLabel="StartPlayButton">
+                                <rect key="frame" x="588" y="481" width="190" height="62"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="Xd9-bV-cen" secondAttribute="height" multiplier="3.05:1" id="MFw-ry-j5J"/>
+                                </constraints>
+                                <size key="titleShadowOffset" width="2" height="2"/>
+                                <state key="normal" backgroundImage="startPlayingButton"/>
+                                <connections>
+                                    <segue destination="UgO-TI-2O9" kind="show" animates="NO" id="SdC-r9-ELL"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="73e-oK-456" firstAttribute="top" secondItem="btm-aD-ZJv" secondAttribute="top" id="1Gk-Id-wpi" userLabel="Settings Button Top Constraint"/>
+                            <constraint firstItem="btm-aD-ZJv" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.33" constant="1" id="4uM-Jy-2l9"/>
+                            <constraint firstItem="73e-oK-456" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.06" id="AgL-5E-F0e"/>
+                            <constraint firstItem="8xX-yB-5v1" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="ItW-1h-eOk"/>
+                            <constraint firstItem="Xd9-bV-cen" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="NEu-ip-dYj"/>
+                            <constraint firstItem="btm-aD-ZJv" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="trailing" id="S13-W0-JHs"/>
+                            <constraint firstItem="btm-aD-ZJv" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.4" id="Vt2-vr-HoI"/>
+                            <constraint firstItem="Xd9-bV-cen" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="aFV-Ty-Lre"/>
+                            <constraint firstItem="Jnn-kK-ney" firstAttribute="height" secondItem="btm-aD-ZJv" secondAttribute="height" id="eQ5-HN-k0f"/>
+                            <constraint firstItem="73e-oK-456" firstAttribute="trailing" secondItem="btm-aD-ZJv" secondAttribute="leading" constant="-30" id="g31-p1-acq" userLabel="Settings Button Trailing Constraint"/>
+                            <constraint firstItem="8xX-yB-5v1" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="hfN-GL-mAk"/>
+                            <constraint firstItem="btm-aD-ZJv" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="50" id="kGu-g4-xfC"/>
+                            <constraint firstItem="Xd9-bV-cen" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.06" id="ket-Tz-vSa"/>
+                            <constraint firstItem="8xX-yB-5v1" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="ofi-dj-hYY"/>
+                            <constraint firstItem="8xX-yB-5v1" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" id="vH8-ue-CKa"/>
+                            <constraint firstItem="Jnn-kK-ney" firstAttribute="trailing" secondItem="btm-aD-ZJv" secondAttribute="trailing" id="xx9-gi-bgw"/>
+                            <constraint firstItem="Jnn-kK-ney" firstAttribute="width" secondItem="btm-aD-ZJv" secondAttribute="width" id="yuN-ht-4lj"/>
+                            <constraint firstItem="Jnn-kK-ney" firstAttribute="top" secondItem="btm-aD-ZJv" secondAttribute="top" id="zVh-0H-Ma9"/>
+                        </constraints>
+                    </view>
+                    <nil key="simulatedStatusBarMetrics"/>
+                    <nil key="simulatedTopBarMetrics"/>
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="iPadPro"/>
+                    <connections>
+                        <outlet property="autoPlaySwitchButton" destination="fsG-Nv-EYF" id="IBM-D9-MCS"/>
+                        <outlet property="autoPlaySwitchTopConstraint" destination="RhI-JV-tHM" id="vX0-Vh-ZUM"/>
+                        <outlet property="buttonLevelEasy" destination="4SN-KK-vKj" id="lrH-yS-muP"/>
+                        <outlet property="buttonLevelHard" destination="6Ji-SQ-5f9" id="Qax-gO-uGW"/>
+                        <outlet property="buttonLevelMedium" destination="7Xx-Cg-T6K" id="uyU-nN-RxA"/>
+                        <outlet property="difficultyLabelTopConstraint" destination="JsZ-4i-n06" id="G7j-zC-mk8"/>
+                        <outlet property="levelEasyButtonTrailingConstraint" destination="8Jn-O8-KrU" id="6R2-vq-kfU"/>
+                        <outlet property="levelMediumButtonTrailingConstraint" destination="siu-1z-xYs" id="jgM-Tp-d1M"/>
+                        <outlet property="miracleItemsSwitchButton" destination="hil-8v-3be" id="okQ-IB-G3v"/>
+                        <outlet property="miracleSwitchTopConstraint" destination="HlY-Z5-O6z" id="jCM-Jv-VIi"/>
+                        <outlet property="musicSwitchButton" destination="6l2-2o-VKv" id="QWG-Qh-Khw"/>
+                        <outlet property="musicSwitchTopConstraint" destination="ncf-MO-kU2" id="MLf-QS-Wdm"/>
+                        <outlet property="settingsButton" destination="73e-oK-456" id="Y4V-8k-YKn"/>
+                        <outlet property="settingsButtonTopConstraint" destination="1Gk-Id-wpi" id="JVZ-xQ-1kr"/>
+                        <outlet property="settingsButtonTrailingConstraint" destination="g31-p1-acq" id="zgU-YN-wtr"/>
+                        <outlet property="settingsPanel" destination="btm-aD-ZJv" id="C6I-kB-FWl"/>
+                        <outlet property="settingsPanelTopContstraint" destination="kGu-g4-xfC" id="APR-Bf-0fo"/>
+                        <outlet property="settingsPanelTrailingConstraint" destination="S13-W0-JHs" id="YtE-Yz-TUY"/>
+                        <outlet property="soundSwitchButton" destination="Spo-ua-FdD" id="R7Q-bX-JG8"/>
+                        <segue destination="wtG-7y-n5W" kind="show" identifier="ShowGameSceneFromMainMenu" animates="NO" id="WBF-mk-ieD"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <exit id="1Hl-Pv-uS3" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="88" y="-862"/>
+        </scene>
+        <!--Stage Selection-->
+        <scene sceneID="DyD-RD-PFN">
+            <objects>
+                <viewController storyboardIdentifier="StageSelectionScene" title="Stage Selection" useStoryboardIdentifierAsRestorationIdentifier="YES" id="UgO-TI-2O9" customClass="StageSelectionViewController" customModule="childPuzzle" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="pw5-Jc-kmE"/>
+                        <viewControllerLayoutGuide type="bottom" id="dTp-d7-MFv"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="paL-KJ-KIy">
+                        <rect key="frame" x="0.0" y="0.0" width="1366" height="1024"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="menuBackgroundClean" translatesAutoresizingMaskIntoConstraints="NO" id="z35-EC-zOK" userLabel="Background">
+                                <rect key="frame" x="0.0" y="0.0" width="1366" height="1024"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" alpha="0.80000000000000004" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="panelBg" translatesAutoresizingMaskIntoConstraints="NO" id="gNs-L6-TB4" userLabel="bgPanelBackground">
+                                <rect key="frame" x="68" y="51" width="1230" height="922"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="20"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="clipsToBounds" value="YES"/>
+                                </userDefinedRuntimeAttributes>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zM8-Fm-WP6" userLabel="bgPanel">
+                                <rect key="frame" x="68" y="51" width="1230" height="922"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="zM8-Fm-WP6" secondAttribute="height" multiplier="4:3" id="hiP-Vp-GUE"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="20"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aCh-1E-lCo" userLabel="Stage0">
+                                <rect key="frame" x="101" y="81" width="547" height="410"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="aCh-1E-lCo" secondAttribute="height" multiplier="4:3" id="UN6-dQ-5HA"/>
+                                </constraints>
+                                <state key="normal" backgroundImage="forest"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="21"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="clipsToBounds" value="YES"/>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="stage0Pressed:" destination="UgO-TI-2O9" eventType="touchUpInside" id="ZmC-Op-DMT"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RVg-GN-dfq" userLabel="Stage2">
+                                <rect key="frame" x="101" y="537" width="547" height="410"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="RVg-GN-dfq" secondAttribute="height" multiplier="4:3" id="HS6-Af-2C0"/>
+                                </constraints>
+                                <state key="normal" backgroundImage="field"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="20"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="clipsToBounds" value="YES"/>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="stage2Pressed:" destination="UgO-TI-2O9" eventType="touchUpInside" id="QsL-bD-6Wh"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g5C-Ks-cFA" userLabel="Stage3">
+                                <rect key="frame" x="716" y="537" width="547" height="410"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="g5C-Ks-cFA" secondAttribute="height" multiplier="4:3" id="ds9-a7-fBc"/>
+                                </constraints>
+                                <state key="normal" backgroundImage="dino"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="20"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="clipsToBounds" value="YES"/>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="stage3Pressed:" destination="UgO-TI-2O9" eventType="touchUpInside" id="bAB-Il-vpV"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="fill" contentVerticalAlignment="fill" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G0I-z6-tEF" userLabel="backButton">
+                                <rect key="frame" x="43" y="21" width="50" height="59"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="G0I-z6-tEF" secondAttribute="height" multiplier="45:54" id="rz0-Ft-GtZ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="TrebuchetMS-Bold" family="Trebuchet MS" pointSize="23"/>
+                                <size key="titleShadowOffset" width="2" height="2"/>
+                                <state key="normal" image="backButton">
+                                    <color key="titleColor" red="0.60000002379999995" green="0.40000000600000002" blue="0.20000000300000001" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="1Hl-Pv-uS3" kind="unwind" identifier="unwindSequeToMainMenuFromStageSelection" animates="NO" unwindAction="prepareForUnwindToMainMenu:" id="Jlx-17-hgF"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CzA-3O-RHW" userLabel="Stage1">
+                                <rect key="frame" x="716" y="81" width="547" height="410"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="CzA-3O-RHW" secondAttribute="height" multiplier="4:3" id="OPf-1Q-44I"/>
+                                </constraints>
+                                <state key="normal" backgroundImage="farming"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="20"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="clipsToBounds" value="YES"/>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="stage1Pressed:" destination="UgO-TI-2O9" eventType="touchUpInside" id="Nhf-pa-xJ9"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="CzA-3O-RHW" firstAttribute="width" secondItem="paL-KJ-KIy" secondAttribute="width" multiplier="0.4" constant="1" id="0RO-Yf-KhH"/>
+                            <constraint firstItem="RVg-GN-dfq" firstAttribute="trailing" secondItem="zM8-Fm-WP6" secondAttribute="centerX" multiplier="0.95" id="2XV-X2-n8e"/>
+                            <constraint firstItem="z35-EC-zOK" firstAttribute="height" secondItem="paL-KJ-KIy" secondAttribute="height" id="3uX-XC-EAr"/>
+                            <constraint firstItem="G0I-z6-tEF" firstAttribute="centerX" secondItem="zM8-Fm-WP6" secondAttribute="leading" id="6iY-uS-Vzb"/>
+                            <constraint firstItem="zM8-Fm-WP6" firstAttribute="centerX" secondItem="paL-KJ-KIy" secondAttribute="centerX" id="9g9-5T-gOC"/>
+                            <constraint firstItem="zM8-Fm-WP6" firstAttribute="width" secondItem="paL-KJ-KIy" secondAttribute="width" multiplier="0.9" id="BqZ-Ee-Enu"/>
+                            <constraint firstItem="g5C-Ks-cFA" firstAttribute="trailing" secondItem="zM8-Fm-WP6" secondAttribute="centerX" multiplier="1.85" id="QRi-0U-Qtb"/>
+                            <constraint firstItem="G0I-z6-tEF" firstAttribute="centerY" secondItem="zM8-Fm-WP6" secondAttribute="top" id="QvS-3G-aXW"/>
+                            <constraint firstItem="g5C-Ks-cFA" firstAttribute="width" secondItem="paL-KJ-KIy" secondAttribute="width" multiplier="0.4" constant="1" id="Sqa-4d-2Na"/>
+                            <constraint firstItem="gNs-L6-TB4" firstAttribute="height" secondItem="zM8-Fm-WP6" secondAttribute="height" id="XR5-BZ-Ggv"/>
+                            <constraint firstItem="zM8-Fm-WP6" firstAttribute="centerY" secondItem="paL-KJ-KIy" secondAttribute="centerY" id="ZPM-cp-7NU"/>
+                            <constraint firstItem="CzA-3O-RHW" firstAttribute="trailing" secondItem="zM8-Fm-WP6" secondAttribute="centerX" multiplier="1.85" id="axP-hp-IQa"/>
+                            <constraint firstItem="RVg-GN-dfq" firstAttribute="bottom" secondItem="zM8-Fm-WP6" secondAttribute="centerY" multiplier="1.85" id="cqC-1c-gtl"/>
+                            <constraint firstItem="gNs-L6-TB4" firstAttribute="leading" secondItem="zM8-Fm-WP6" secondAttribute="leading" id="fHj-oX-xaR"/>
+                            <constraint firstItem="gNs-L6-TB4" firstAttribute="top" secondItem="zM8-Fm-WP6" secondAttribute="top" id="g4T-oB-Ueu"/>
+                            <constraint firstItem="aCh-1E-lCo" firstAttribute="trailing" secondItem="zM8-Fm-WP6" secondAttribute="centerX" multiplier="0.95" id="iwy-2M-DzY"/>
+                            <constraint firstItem="gNs-L6-TB4" firstAttribute="width" secondItem="zM8-Fm-WP6" secondAttribute="width" id="k0F-re-T9H"/>
+                            <constraint firstItem="aCh-1E-lCo" firstAttribute="width" secondItem="paL-KJ-KIy" secondAttribute="width" multiplier="0.4" constant="1" id="lZh-Vi-hxP"/>
+                            <constraint firstItem="RVg-GN-dfq" firstAttribute="width" secondItem="paL-KJ-KIy" secondAttribute="width" multiplier="0.4" constant="1" id="mtF-Cl-i1d"/>
+                            <constraint firstItem="CzA-3O-RHW" firstAttribute="top" secondItem="zM8-Fm-WP6" secondAttribute="top" multiplier="1.6" id="q3k-g0-Vf6"/>
+                            <constraint firstItem="z35-EC-zOK" firstAttribute="width" secondItem="paL-KJ-KIy" secondAttribute="width" id="q5n-xh-a0J"/>
+                            <constraint firstItem="G0I-z6-tEF" firstAttribute="width" secondItem="paL-KJ-KIy" secondAttribute="width" multiplier="0.036" id="sIb-Vn-ydS"/>
+                            <constraint firstItem="aCh-1E-lCo" firstAttribute="top" secondItem="zM8-Fm-WP6" secondAttribute="top" multiplier="1.6" id="t8w-RB-sbT"/>
+                            <constraint firstItem="g5C-Ks-cFA" firstAttribute="bottom" secondItem="zM8-Fm-WP6" secondAttribute="centerY" multiplier="1.85" id="uO3-oa-n1I"/>
+                            <constraint firstItem="z35-EC-zOK" firstAttribute="centerY" secondItem="paL-KJ-KIy" secondAttribute="centerY" id="xch-4U-RyC"/>
+                            <constraint firstItem="z35-EC-zOK" firstAttribute="centerX" secondItem="paL-KJ-KIy" secondAttribute="centerX" id="y5G-JL-PqA"/>
+                        </constraints>
+                    </view>
+                    <nil key="simulatedStatusBarMetrics"/>
+                    <nil key="simulatedTopBarMetrics"/>
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="iPadPro"/>
+                    <connections>
+                        <outlet property="stage0Button" destination="aCh-1E-lCo" id="5BX-AZ-iym"/>
+                        <outlet property="stage1Button" destination="CzA-3O-RHW" id="gGx-eJ-Sb3"/>
+                        <outlet property="stage2Button" destination="RVg-GN-dfq" id="MD0-av-sKV"/>
+                        <outlet property="stage3Button" destination="g5C-Ks-cFA" id="emA-eP-ga0"/>
+                        <segue destination="wtG-7y-n5W" kind="show" identifier="ShowGameScene" animates="NO" id="6Bh-nK-Avx"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Dj5-sz-Fe2" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="88" y="534"/>
+        </scene>
+        <!--Game Scene-->
+        <scene sceneID="792-iK-Ggj">
+            <objects>
+                <viewController storyboardIdentifier="GameScene" title="Game Scene" useStoryboardIdentifierAsRestorationIdentifier="YES" id="wtG-7y-n5W" customClass="GameSceneViewController" customModule="childPuzzle" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="NvU-gn-KNW"/>
+                        <viewControllerLayoutGuide type="bottom" id="n3G-P5-xas"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Qgm-6U-ANl">
+                        <rect key="frame" x="0.0" y="0.0" width="1366" height="1024"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <nil key="simulatedStatusBarMetrics"/>
+                    <nil key="simulatedTopBarMetrics"/>
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="iPadPro"/>
+                    <connections>
+                        <segue destination="1N8-h5-udr" kind="unwind" identifier="unwindToStageSelectionFromGameScene" animates="NO" unwindAction="prepareForUnwindToStageSelection:" id="Ahr-OB-pAg"/>
+                        <segue destination="1Hl-Pv-uS3" kind="unwind" identifier="unwindSequeToMainMenuFromGameScene" animates="NO" unwindAction="prepareForUnwindToMainMenu:" id="E2c-em-Bsl"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cga-bU-pOm" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="1N8-h5-udr" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="1612" y="542"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="autoPlayCheckboxOn" width="341" height="50"/>
+        <image name="backButton" width="15" height="18"/>
+        <image name="btnLevel1On" width="42" height="50"/>
+        <image name="btnLevel2On" width="42" height="50"/>
+        <image name="btnLevel3On" width="42" height="50"/>
+        <image name="difficultyLevelLabel" width="132" height="50"/>
+        <image name="dino" width="444" height="333"/>
+        <image name="farming" width="444" height="333"/>
+        <image name="field" width="444" height="333"/>
+        <image name="forest" width="444" height="333"/>
+        <image name="menuBackground" width="480" height="360"/>
+        <image name="menuBackgroundClean" width="480" height="360"/>
+        <image name="miracleItemsCheckboxOn" width="341" height="50"/>
+        <image name="music" width="85" height="85"/>
+        <image name="panelBg" width="640" height="360"/>
+        <image name="settings" width="171" height="166"/>
+        <image name="startPlayingButton" width="56" height="18"/>
+        <image name="tone" width="85" height="85"/>
+    </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="WBF-mk-ieD"/>
+    </inferredMetricsTieBreakers>
+</document>
