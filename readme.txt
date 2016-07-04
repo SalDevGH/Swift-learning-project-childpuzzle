@@ -42,13 +42,15 @@ Features and used technologies in the game:
   continuously without bothering with the menu system
 - clearly documented code
 - uses SpriteKit/UIKit for rendering and animations
+- uses Particle system
 - uses AVFoundation for music and effects handling
 - uses SQLite.swift for database handling
 - uses NSUserDefaults for storing application settings
 
 Future releases are planned to include:
 
-- using protocols instead of subclassing whereever it fits
+- usage of protocols and protocol extensions instead of subclassing whereever it fits
+- usage of GamePlayKit
 - pre-fetching all media which would allow a more seemless experience
 - more miracle items
 - a dynamic stage selection scene. Right now the stage images on the buttons and the 
