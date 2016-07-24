@@ -28,8 +28,7 @@ stage, or navigates back to the menu system when the feature is turned off.
 
 About the Beta version:
 -----------------------
-Since it is a learning project, not all fancy features of Swift is used yet, but the code 
-is Swift 3 ready.
+Since it is a learning project, not all fancy features of Swift is used yet.
 
 Features and used technologies in the game:
 
