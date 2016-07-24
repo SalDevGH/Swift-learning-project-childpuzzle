@@ -8,7 +8,7 @@ background are cut off and they are floating around somewhere on the scene.
 The goal is to find and place all these items to their appropriate place.
 
 There is also a possibility to change difficulty level. If the player chooses to play
-on easy or medium, some of their items will be already placed into their winner position.
+on easy or medium, some of the items will be already placed to winner position.
 
 Some (not-really-)hidden elements are also placed over the background, which are 
 considered as miracle items. After tapping these, they are doing some animations and/or
