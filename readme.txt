@@ -1,11 +1,12 @@
 ChildPuzzle is a personal demo game written in Swift for the iPads.
 
 
-GamePlay:
+Gameplay:
 ---------
 The child starts to play on a stage, which shows a nice background. Some parts of the 
-background are cut off and they are floating around somewhere on the scene. 
-The goal is to find and place all these items to their appropriate place.
+background (matching items) are cut off and they are floating around somewhere on the scene. 
+The goal is to find and place all these items to their appropriate position using drag 
+and drop.
 
 There is also a possibility to change difficulty level. If the player chooses to play
 on easy or medium, some of the items will be already placed to winner position.
