@@ -16,7 +16,7 @@ var app = Application()
 
 What is it handles on top of the base class?
 	- game state and related transition changes
-	- music and sound effects except of the gameplay effects
+	- music and sound effects except the gameplay effects
 	- introduces auto-play feature
 	- introduces miracle item handling
 */
