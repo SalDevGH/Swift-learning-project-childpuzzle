@@ -60,5 +60,5 @@ Future releases are planned to include:
 Copyright of used media:
 ------------------------
 All the used media content (images, sound effects, music) in the project are coming from 
-the wild internet, and they are not about to be used in any commercial and non-commercial 
+the wild internet, and they are not about to be used in any commercial or non-commercial 
 releases. All these media items are the property of their respective owners.  
