@@ -10,14 +10,14 @@ import SpriteKit
 
 // This class is the manager of the playable and non-playable matching items
 class MatchingItemController: ItemController {
-	// this number will be used as a divisor to control the birthrate of the particle system
+	// this number will be used as a divisor to control the birthrate of the particle systems
 	private let particleBirthRateDivisor: CGFloat = 30
 
-	// this number will be used as a divisor to control the position range of particle system
+	// this number will be used as a divisor to control the position range of the particle systems
 	private let particlePositionRangeDivisor: CGFloat = 1.5
 
 
-    // called by app when starting a stage
+    // 2nd pass init
     internal func start() {
         self.model = MatchingItemModel()
     }
@@ -86,19 +86,19 @@ class MatchingItemController: ItemController {
 
 	// populates the scene with a placeholder emmitter to let the player know where to place the item
 	internal func createPlaceHolderEmmitter(data: MatchingItemModel.matchingItemData) {
-		let emmitter = SKEmitterNode(fileNamed: Defines.FILE_NAME_PARTICLE_PLACEHOLDER)
+		let emmitter = SKEmitterNode(fileNamed: Defines.FILE_NAME_PARTICLE_PLACEHOLDER)!
 
-		emmitter!.name                  = self.getEmmitterNameOfPlayItem(data.alias)
-		emmitter!.position              = data.winningPosition
-		emmitter!.zPosition             = Defines.Z_INDEX_MAP.itemParticleSys
-		emmitter!.particleBirthRate     = data.width / self.particleBirthRateDivisor
-		emmitter!.particlePositionRange = CGVector(
+		emmitter.name                  = self.getEmmitterNameOfPlayItem(data.alias)
+		emmitter.position              = data.winningPosition
+		emmitter.zPosition             = Defines.Z_INDEX_MAP.itemParticleSys
+		emmitter.particleBirthRate     = data.width / self.particleBirthRateDivisor
+		emmitter.particlePositionRange = CGVector(
 			dx: data.width / self.particlePositionRangeDivisor,
 			dy: data.height / self.particlePositionRangeDivisor
 		)
 
 		// add particle node to scene
-		app.getScene()!.addChild(emmitter!)
+		app.getScene()!.addChild(emmitter)
 	}
 
 	// removes the placeholder emmitter of an item
