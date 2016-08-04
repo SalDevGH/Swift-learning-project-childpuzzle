@@ -46,7 +46,7 @@ Features and used technologies in the game:
 - uses AVFoundation for music and effects handling
 - uses SQLite.swift for database handling
 - uses NSUserDefaults for storing application settings
-- Unit test included (for the most critical part of the Game only)
+- unit test included for the most critical part of the game
 
 Future releases are planned to include:
 
