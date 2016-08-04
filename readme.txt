@@ -23,7 +23,7 @@ Two types of these are existing:
      that game
 
 After the player won, depending on the Auto-play settings, the game will start the next 
-stage, or navigates back to the menu system when the feature is turned off.
+stage or navigates back to the menu system when the feature is turned off.
 
 
 About the Beta version:
@@ -46,6 +46,7 @@ Features and used technologies in the game:
 - uses AVFoundation for music and effects handling
 - uses SQLite.swift for database handling
 - uses NSUserDefaults for storing application settings
+- Unit test included (for the most critical part of the Game only)
 
 Future releases are planned to include:
 
