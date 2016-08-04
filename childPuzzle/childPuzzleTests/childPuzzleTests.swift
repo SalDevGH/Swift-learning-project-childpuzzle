@@ -2,7 +2,6 @@
 //  childPuzzleTests.swift
 //  childPuzzleTests
 //
-//  Created by Gabor on 1/17/16.
 //  Copyright © 2016 gsaliga. All rights reserved.
 //
 
