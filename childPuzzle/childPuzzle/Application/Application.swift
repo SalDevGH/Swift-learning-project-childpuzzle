@@ -12,7 +12,7 @@ import SQLite
 // Creating the one and only application object
 var app = Application()
 
-/* This class is intended to be the general manager of all big happenings within the application
+/* This class is intended to be the general manager of the application
 
 What is it handles on top of the base class?
 	- game state and related transition changes
@@ -201,7 +201,7 @@ class Application: SpriteKitGameBase {
 	}
 
 	// tells whether the game-scene is playable
-	// it will give true only when the stage is yet presented BUT the player already won on it
+	// it will give true only when the stage is yet presented AND the player already won it
 	internal func isGameOver() -> Bool {
 		return self.currentGameState == .finishingStage
 	}

@@ -8,7 +8,7 @@
 import SpriteKit
 
 // Handler class of the Scene which contains the game elements
-// It is starting the actual gameplay, and handles all the touch events on the scene
+// It is automatically starting the actual gameplay, plus handles the touch events on the scene
 class PlayScene: SKScene {
 
     // called immediately after the scene is presented by a view
